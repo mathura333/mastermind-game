@@ -1,13 +1,16 @@
+import PegVariants from "../../../../types/PegVariants";
 import SoloPeg from "./SoloPeg";
 
-const Pegs = () => {
+interface IPegs {
+  pegsVariants: Array<PegVariants>;
+}
+
+const Pegs: React.FC<IPegs> = ({ pegsVariants }) => {
   return (
     <div className="flex flex-wrap gap-2 w-8">
-      {Array(4)
-        .fill(1)
-        .map(() => (
-          <SoloPeg />
-        ))}
+      {pegsVariants.map((pegVariant) => (
+        <SoloPeg variant={pegVariant} />
+      ))}
     </div>
   );
 };

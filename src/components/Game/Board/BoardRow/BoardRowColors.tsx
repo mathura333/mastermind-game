@@ -1,13 +1,20 @@
 import SoloColor from "../../../common/SoloColor";
 
-const BoardRowColors = () => {
+interface IBoardRowColors {
+  rowColors: Array<string>;
+  onClick: (index: number) => void;
+}
+
+const BoardRowColors: React.FC<IBoardRowColors> = ({ rowColors, onClick }) => {
   return (
     <div className="flex gap-1">
-      {Array(4)
-        .fill(1)
-        .map(() => (
-          <SoloColor isSelected={false} onClick={() => {}} />
-        ))}
+      {rowColors.map((color, index) => (
+        <SoloColor
+          isSelected={false}
+          onClick={() => onClick(index)}
+          color={color}
+        />
+      ))}
     </div>
   );
 };

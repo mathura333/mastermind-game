@@ -1,5 +1,5 @@
 const boardColors = [
-  "text-red-400",
+  "text-rose-400",
   "text-orange-500",
   "text-amber-400",
   "text-lime-500",
@@ -8,7 +8,7 @@ const boardColors = [
 ];
 
 export const boardColorsBg = [
-  "bg-red-400",
+  "bg-rose-400",
   "bg-orange-500",
   "bg-amber-400",
   "bg-lime-500",
