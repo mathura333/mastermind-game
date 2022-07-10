@@ -1,4 +1,4 @@
-import SoloColor from "../../../common/SoloColor";
+import SoloColor from '../../../common/SoloColor';
 
 interface IBoardRowColors {
   rowColors: Array<string>;
@@ -13,6 +13,7 @@ const BoardRowColors: React.FC<IBoardRowColors> = ({ rowColors, onClick }) => {
           isSelected={false}
           onClick={() => onClick(index)}
           color={color}
+          key={index}
         />
       ))}
     </div>
